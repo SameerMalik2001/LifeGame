@@ -44,7 +44,6 @@ const CheckboxWithTitle: React.FC<CheckboxWithTitleType> = ({ title, checkboxVal
       if(checkTrueValue(prev) === 2) {
         const title: string = unCheckbox(prev);
         const correstpondingTitle = mapping.get(title)
-        console.log(correstpondingTitle);
         let temp = [...prev]
         const result = temp.map((item: checkboxValueType)=> {
           if(item.title === correstpondingTitle) {
@@ -55,7 +54,6 @@ const CheckboxWithTitle: React.FC<CheckboxWithTitleType> = ({ title, checkboxVal
           }
           return item;
         })
-        console.log(result);
         return result;
       } else {
         let temp: checkboxValueType[] = [...prev]
